@@ -1,4 +1,5 @@
- public function manage_timeout_by_file($file_name, $timeout){
+<?php
+public function manage_timeout_by_file($file_name, $timeout){
         @$lastTime = file_get_contents('/var/www/html/svx_prodesp/recursos/uploads/' . $file_name);
 
         if((time() - @$lastTime) > $timeout){
@@ -21,3 +22,5 @@
         die('Aguarde...' . ((int)time() - (int)@$lastTime) . ' de ' . $timeout . ' segundos');
 
     }
+
+?>
