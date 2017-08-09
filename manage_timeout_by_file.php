@@ -1,4 +1,11 @@
 <?php
+/**
+     * @param $file_name
+     * @param $timeout
+     * @return bool
+     * 
+     */
+
 public function manage_timeout_by_file($file_name, $timeout){
         @$lastTime = file_get_contents('/var/www/html/svx_prodesp/recursos/uploads/' . $file_name);
 
